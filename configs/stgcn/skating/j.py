@@ -57,7 +57,7 @@ lr_config = dict(policy='CosineAnnealing', min_lr=0, by_epoch=False)
 total_epochs = 16
 checkpoint_config = dict(interval=1)
 evaluation = dict(interval=1, metrics=['top_k_accuracy'])
-log_config = dict(interval=100, hooks=[dict(type='TextLoggerHook')])
+log_config = dict(interval=100, hooks=[dict(type='TextLoggerHook'), dict(type='TensorboardLoggerHook')])
 
 # runtime settings
 log_level = 'INFO'
