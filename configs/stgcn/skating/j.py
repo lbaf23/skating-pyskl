@@ -4,7 +4,7 @@ model = dict(
         type='STGCN',
         graph_cfg=dict(layout='coco', mode='stgcn_spatial')
     ),
-    cls_head=dict(type='GCNHead', num_classes=30, in_channels=256)
+    cls_head=dict(type='nturgb+d', num_classes=30, in_channels=256)
 )
 
 dataset_type = 'PoseDataset'
